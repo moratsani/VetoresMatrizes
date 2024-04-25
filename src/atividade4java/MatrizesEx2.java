@@ -17,12 +17,14 @@ public class MatrizesEx2 {
 		Scanner leia = new Scanner(System.in);
 
 		double[][] matrizDoub = new double[10][4];
-		double soma = 0, media = 0;
+		double [] media = new double[10];
+		
+		double soma = 0;
 		int linha = 0, coluna = 0;
 
 		for (linha = 0; linha < 10; linha++) {
 			for (coluna = 0; coluna < 4; coluna++) {
-				System.out.println("Digite um valor para a posição [" + linha + "][" + coluna + "]: ");
+				System.out.printf("Digite a %dª nota para o %dº aluno: \n", coluna + 1, linha + 1);
 				matrizDoub[linha][coluna] = leia.nextDouble();
 
 			}
@@ -32,8 +34,8 @@ public class MatrizesEx2 {
 			for (coluna = 0; coluna < 4; coluna++) {
 				soma += matrizDoub[linha][coluna];
 			}
-			media = soma / 4;
-			System.out.printf("[%.2f] ",media);
+			media[linha] = soma / 4;
+			System.out.printf("[%.1f] ",media[linha]);
 		}
 
 	}
