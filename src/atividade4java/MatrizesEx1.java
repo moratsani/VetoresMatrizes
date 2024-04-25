@@ -24,20 +24,8 @@ public class MatrizesEx1 {
 
 			System.out.println();
 		}
-		System.out.println("--------------------------------------");
-		System.out.println("Diagonal principal:");
-		System.out.print("[" + numeros[0][0] + "] ");
-		System.out.print("[" + numeros[1][1] + "] ");
-		System.out.print("[" + numeros[2][2] + "] ");
-		System.out.println("--------------------------------------");
 
-		System.out.println("Diagonal secundária:");
-		System.out.print("[" + numeros[0][2] + "] ");
-		System.out.print("[" + numeros[1][1] + "] ");
-		System.out.print("[" + numeros[2][0] + "] ");
-		System.out.println("---------------------------------------");
-
-		System.out.println("\n--------------Todos os elementos da diagonal principal--------------");
+		System.out.println("\n--------------Todos os elementos da diagonal principal--------------\n");
 		// exbindo o que tem na diagonal principal
 		for (int contador = 0; contador < numeros.length; contador++) {
 			int cont = 0;
@@ -46,7 +34,7 @@ public class MatrizesEx1 {
 			resultadoPri += numeros[contador][contador];
 		}
 
-		System.out.println("--------------Todos os elementos da diagonal principal--------------");
+		System.out.println("\n\n--------------Todos os elementos da diagonal secundária--------------\n");
 		for (int contador = 0; contador < numeros.length; contador++) {
 			int cont = 0;
 			cont += numeros[contador][2 - contador];
@@ -54,10 +42,10 @@ public class MatrizesEx1 {
 			resultadoSec += numeros[contador][2 - contador];
 		}
 
-		System.out.println("\n-----------A Soma de todos os elementos da Diagonal Principal-----------------");
+		System.out.println("\n\n-----------A Soma de todos os elementos da Diagonal Principal-----------------");
 		System.out.println(resultadoPri);
 
-		System.out.println("\n-----------A Soma de todos os elementos da Diagonal Secundaria-----------------");
+		System.out.println("\n\n-----------A Soma de todos os elementos da Diagonal Secundaria-----------------");
 		System.out.println(resultadoSec);
 
 	}
